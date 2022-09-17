@@ -1,0 +1,30 @@
+﻿<Window x:Class="LibraryProject.Views.OpeningView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryProject.Views"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Opening}"
+        mc:Ignorable="d"
+        Title="OpeningView" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Enter your Password or enter as customer" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Center"/>
+        <TextBox x:Name="a" Text="{Binding UserName}" Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="b" Text="{Binding Password}" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="worker" Content="worker" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Width="250" Command="{Binding Worker}"/>
+        <Button x:Name="customer" Content="Enter as customer" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Command="{Binding Customer}"/>
+        <TextBlock Text="{Binding Access}" Grid.Row="3" Foreground="Red" TextAlignment="Center" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

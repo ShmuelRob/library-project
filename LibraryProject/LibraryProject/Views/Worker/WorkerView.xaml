@@ -1,0 +1,29 @@
+﻿<Window x:Class="LibraryProject.Views.Worker.WorkerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryProject.Views.Worker"
+        xmlns:y="clr-namespace:LibraryProject.Views.Worker.WorkerTabs"
+        mc:Ignorable="d"
+        Title="WorkerView" Height="450" Width="800">
+    <Grid>
+        <TabControl TabStripPlacement="Left" >
+            <TabItem Header="Overview">
+                <y:OverviewView/>
+            </TabItem>
+            <TabItem Header="Add Items">
+                <y:AddView/>
+            </TabItem>
+            <TabItem Header="Remove Items">
+                <y:RemoveView/>
+            </TabItem>
+            <TabItem Header="Filters">
+                <y:FilterView/>
+            </TabItem>
+            <TabItem Header="General">
+                <y:GeneralView/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
